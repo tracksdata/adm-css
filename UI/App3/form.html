@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="public/css/styles.css" />
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function test() {
+            console.log("..test");
+            var fd = document.querySelector('#fd');
+            console.log(fd);
+            fd.style.display = 'none';
+        }
+
+        function validateForm(){
+
+           let un=document.querySelector("#userName");
+           let fn=document.querySelector("#fn");
+           let email=document.querySelector("#email");
+           
+           if(!un.value.trim()){
+               document.getElementById("userError").innerHTML="User Name is Required"
+               return false;
+           }else{
+            document.getElementById("userError").innerHTML=""
+
+           }
+
+           if(!fn.value.trim()){
+               document.getElementById("fnError").innerHTML="First Name is Required"
+               return false;
+           }else{
+            document.getElementById("fnError").innerHTML=""
+  
+           }
+
+           if(!email.value.trim()){
+               document.getElementById("emailError").innerHTML="Email is Required"
+               return false;
+           }else{
+            document.getElementById("emailError").innerHTML=""
+
+           }
+
+           // http server code submition ::: ajax or fetch
+           
+           return true;
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Form</h1>
+    <div id="fd">
+        <form onsubmit="return validateForm()" autocomplete="off">
+            <div class="mt">
+                <lable>User Name</lable>
+                <input type="text" id="userName" class="form-control" />
+                <span class="text-danger" id="userError"></span>
+            </div>
+
+            <div class="mt">
+                <lable>First name</lable>
+                <input type="text" id="fn" name="firstName" class="form-control" />
+                <span class="text-danger" id="fnError"></span>
+
+            </div>
+
+            <div class="mt">
+                <lable>Email Address</lable>
+                <input type="text" id="email" name="email" class="form-control" />
+                <span class="text-danger" id="emailError"></span>
+
+            </div>
+
+            <div class="mt">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button class="btn btn-secondary">Clear All</button>
+                <button type="button" class="btn btn-danger" onClick="test()">Cancel</button>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
