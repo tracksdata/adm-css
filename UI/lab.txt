@@ -1,0 +1,10 @@
+Note: to use npm, node.js software installed ( https://nodejs.org/en/)
+
+Live Server
+-------------
+npm install -g live-server
+
+node based application structure
+--------------------------------------
+npm init (hit enter key till u see confirmation message)
+

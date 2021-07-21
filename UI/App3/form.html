@@ -28,7 +28,7 @@
            }
 
            if(!fn.value.trim()){
-               document.getElementById("fnError").innerHTML="First Name is Required"
+               document.querySelector("#fnError").innerHTML="First Name is Required..."
                return false;
            }else{
             document.getElementById("fnError").innerHTML=""
@@ -44,7 +44,7 @@
            }
 
            // http server code submition ::: ajax or fetch
-           
+
            return true;
 
         }
