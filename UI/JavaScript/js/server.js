@@ -19,6 +19,9 @@ fetch('https://reqres.in/api/users')
     })
 
 
+    console.log("===============================");
+    console.log(this.location);
+    console.log("===============================");
 
     console.log(users);
 
@@ -30,12 +33,10 @@ fetch('https://reqres.in/api/users')
     console.log('user '+name+' is from '+loc+' and he is '+age+' years old');
     console.log(`User ${name} is from ${loc} and he is ${age} years old`);
 
-
-
     function displayUser(user){
         return `
         <div>
-            <p> ${user.id}</p>
+            <p>${user.id}</p>
             <p>${user.first_name}</p>
             <p>${user.last_name}</p>
             <p>${user.email}</p>
