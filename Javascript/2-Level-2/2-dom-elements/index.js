@@ -92,6 +92,8 @@ Createing DOM Elements
 
 const b1 = document.getElementById('b1');
 
+let showTableDiv = true;
+
 // create input element and append it to div whose id is 'd1
 function createNewDOMElement() {
     const element = document.createElement('input');
@@ -128,10 +130,12 @@ document.getElementById('b2').addEventListener('click', function () {
 
 document.getElementById('b3').addEventListener('click', function () {
 
+
     // create a div
     let tableDiv = document.createElement('div');
     tableDiv.setAttribute('class', 'empTable');
     tableDiv.setAttribute('id', 'emptableDiv');
+   // showTableDiv ? tableDiv.setAttribute('hidden', 'true') : '';
     // Craete table
     let tableElement = document.createElement('table');
     tableElement.setAttribute('border', 1);
@@ -199,6 +203,10 @@ document.getElementById('b3').addEventListener('click', function () {
 
     }
 
+})
+
+document.getElementById('b4').addEventListener('click', function () {
+    showTableDiv = false;
 })
 
 
